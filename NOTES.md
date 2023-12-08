@@ -24,30 +24,66 @@ Build some packages:
 Result:
 ```
 dpkg-architecture: warning: specified GNU system type aarch64-linux-gnu does not match CC system type x86_64-linux-gnu, try setting a correct CC environment variable
-Downloading Repo source from https://gerrit.googlesource.com/git-repo
-repo: Updating release signing keys to keyset ver 2.3
-
-repo has been initialized in /work/build/sources-sr-imx8-debian-11
-Fetching: 100% (5/5), done in 53.883s
-Fetching: 100% (1/1), done in 5m0.102s
-Updating files: 100% (72299/72299), done.
-Checking out: 100% (6/6), done in 6.471s
+Fetching: 100% (6/6), done in 1.765s
 repo sync has finished successfully.
 /work/build/sources-sr-imx8-debian-11/0010-keyring
-pkgsource: None, sourcedir: /work/build/sources-sr-imx8-debian-11/0010-keyring
-Error: Found no source package in /work/build/sources-sr-imx8-debian-11/0010-keyring!
-/work/build/sources-sr-imx8-debian-11/0020-linux
-pkgsource: None, sourcedir: /work/build/sources-sr-imx8-debian-11/0020-linux
-Error: Found no source package in /work/build/sources-sr-imx8-debian-11/0020-linux!
-/work/build/sources-sr-imx8-debian-11/0030-bsp
-pkgsource: None, sourcedir: /work/build/sources-sr-imx8-debian-11/0030-bsp
-Error: Found no source package in /work/build/sources-sr-imx8-debian-11/0030-bsp!
-/work/build/sources-sr-imx8-debian-11/0040-runonce
-pkgsource: None, sourcedir: /work/build/sources-sr-imx8-debian-11/0040-runonce
-Error: Found no source package in /work/build/sources-sr-imx8-debian-11/0040-runonce!
-/work/build/sources-sr-imx8-debian-11/0050-expand-fs
-pkgsource: None, sourcedir: /work/build/sources-sr-imx8-debian-11/0050-expand-fs
-Error: Found no source package in /work/build/sources-sr-imx8-debian-11/0050-expand-fs!
+Building /work/build/sources-sr-imx8-debian-11/0010-keyring/pkgsrc!
+dh clean
+dh: warning: Compatibility levels before 10 are deprecated (level 9 in use)
+   debian/rules override_dh_auto_clean
+make[1]: Entering directory '/work/build/sources-sr-imx8-debian-11/0010-keyring/pkgsrc'
+rm -fr /work/build/sources-sr-imx8-debian-11/0010-keyring/pkgsrc/build
+make[1]: Leaving directory '/work/build/sources-sr-imx8-debian-11/0010-keyring/pkgsrc'
+   dh_clean
+dh_clean: warning: Compatibility levels before 10 are deprecated (level 9 in use)
+dpkg-source: info: using source format '3.0 (native)'
+dpkg-source: info: building solidrun-keyring in solidrun-keyring_2022.07.04.tar.xz
+dpkg-source: info: building solidrun-keyring in solidrun-keyring_2022.07.04.dsc
+sbuild (Debian sbuild) 0.85.0 (04 January 2023) on c3b7789526aa
+
++==============================================================================+
+| solidrun-keyring 2022.07.04 (arm64)          Fri, 08 Dec 2023 23:24:43 +0000 |
++==============================================================================+
+
+Package: solidrun-keyring
+Version: 2022.07.04
+Source Version: 2022.07.04
+Distribution: bullseye
+Machine Architecture: amd64
+Host Architecture: arm64
+Build Architecture: amd64
+Build Profiles: cross nocheck
+Build Type: binary
+
+E: Chroot for distribution bullseye, architecture amd64 not found
+E: Error creating chroot
+
++------------------------------------------------------------------------------+
+| Summary                                                                      |
++------------------------------------------------------------------------------+
+
+Build Architecture: amd64
+Build Profiles: cross nocheck
+Build Type: binary
+Build-Space: 0
+Build-Time: 0
+Distribution: bullseye
+Fail-Stage: create-session
+Host Architecture: arm64
+Install-Time: 0
+Job: /work/build/sources-sr-imx8-debian-11/0010-keyring/solidrun-keyring_2022.07.04.dsc
+Machine Architecture: amd64
+Package: solidrun-keyring
+Package-Time: 0
+Source-Version: 2022.07.04
+Space: 0
+Status: failed
+Version: 2022.07.04
+--------------------------------------------------------------------------------
+Finished at 2023-12-08T23:24:43Z
+Build needed 00:00:00, 0k disk space
+E: Error creating chroot
+sbuild returned 1 for /work/build/sources-sr-imx8-debian-11/0010-keyring!
 ```
 
 Build image:
