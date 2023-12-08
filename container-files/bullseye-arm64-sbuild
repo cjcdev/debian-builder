@@ -1,0 +1,9 @@
+[bullseye-arm64-sbuild]
+description=Debian bullseye/arm64 autobuilder
+groups=root,sbuild
+root-groups=root,sbuild
+profile=sbuild
+type=directory
+directory=/srv/chroot/bullseye-arm64-sbuild
+union-type=overlay
+command-prefix=eatmydata
